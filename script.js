@@ -1,16 +1,21 @@
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+
 const taskList = document.getElementById("taskList");
+
 const addTaskBtn = document.getElementById("addTaskBtn");
 
 addTaskBtn.addEventListener("click", addTask);
 
 function addTask() {
+    
     const title = document.getElementById("taskTitle").value;
     const date = document.getElementById("taskDate").value;
 
     if (title === "") {
+        
         alert("Task title cannot be empty!");
+        
         return;
     }
 
@@ -33,7 +38,7 @@ function addTask() {
     displayTasks();
 
     document.getElementById("taskTitle").value = "";
-    document.getElementById("taskDate").value = "";
+        document.getElementById("taskDate").value = "";
 }
 
 function displayTasks(filteredTasks = tasks) {
@@ -76,9 +81,9 @@ function deleteTask(id) {
 
 function filterTasks(status) {
     if (status === "all") displayTasks();
-    else if (status === "completed") displayTasks(tasks.filter(t => t.completed));
-    else if (status === "pending") displayTasks(tasks.filter(t => !t.completed));
-    else if (status === "overdue") displayTasks(tasks.filter(t => t.overdue));
+        else if (status === "completed") displayTasks(tasks.filter(t => t.completed));
+            else if (status === "pending") displayTasks(tasks.filter(t => !t.completed));
+        else if (status === "overdue") displayTasks(tasks.filter(t => t.overdue));
 }
 
 function saveTasks() {
@@ -87,12 +92,12 @@ function saveTasks() {
 
 function checkOverdue() {
     const today = new Date().toISOString().split("T")[0];
-    tasks.forEach(task => {
+        tasks.forEach(task => {
         if (!task.completed && task.date < today) task.overdue = true;
-        else task.overdue = false;
+            else task.overdue = false;
     });
 }
 
-// نمایش اولیه
 checkOverdue();
 displayTasks();
+
