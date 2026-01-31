@@ -1,4 +1,4 @@
-/* ====== BODY ====== */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #eef2f7;
@@ -10,7 +10,6 @@ body {
     color: #333;
 }
 
-/* ====== CONTAINER ====== */
 .container {
     width: 480px;
     background: #fff;
@@ -25,7 +24,6 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* ====== TITLE ====== */
 h1 {
     text-align: center;
     font-size: 2rem;
@@ -34,7 +32,6 @@ h1 {
     color: #2b2b2b;
 }
 
-/* ====== INPUT ====== */
 input[type="text"], input[type="date"] {
     width: 100%;
     padding: 12px 15px;
@@ -51,7 +48,7 @@ input[type="text"]:focus, input[type="date"]:focus {
     outline: none;
 }
 
-/* ====== ADD BUTTON ====== */
+
 #addTaskBtn {
     width: 100%;
     padding: 12px;
@@ -69,7 +66,6 @@ input[type="text"]:focus, input[type="date"]:focus {
     box-shadow: 0 8px 20px rgba(108,99,255,0.25);
 }
 
-/* ====== FILTER BUTTONS ====== */
 .filters {
     display: flex;
     justify-content: space-around;
@@ -93,7 +89,6 @@ input[type="text"]:focus, input[type="date"]:focus {
     transform: scale(1.05);
 }
 
-/* ====== TASK LIST ====== */
 ul#taskList {
     list-style: none;
     padding: 0;
@@ -123,7 +118,6 @@ li.completed span {
     color: #999;
 }
 
-/* ====== BUTTONS INSIDE TASK ====== */
 li.list-group-item button {
     padding: 6px 12px;
     border-radius: 10px;
@@ -152,7 +146,6 @@ li.list-group-item button:last-child:hover {
     background: #e53935;
 }
 
-/* ===== FOOTER ===== */
 .footer {
     font-size: 0.85rem;
     color: #777;
@@ -168,3 +161,4 @@ li.list-group-item button:last-child:hover {
     text-decoration: underline;
     color: #4b49d1;
 }
+
